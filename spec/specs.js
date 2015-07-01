@@ -16,12 +16,12 @@ describe('pigLatin', function() {
   });
 });
 
-describe('hasConsonantAt', function() {
-  it('returns true if a word has a consonant in the specified spot', function() {
-    hasConsonantAt('peanut', 0).should.equal(true);
+describe('indexOfFirstVowel', function() {
+  it('returns 0 for a word that starts with a vowel', function() {
+    indexOfFirstVowel('apple').should.equal(0);
   });
 
-  it('returns false if a word does not have a consonant in the specified spot', function() {
-    hasConsonantAt('peanut', 1).should.equal(false)
+  it('returns 1 for a word that starts with a single consonant', function() {
+    indexOfFirstVowel('cat').should.equal(1);
   });
 });
