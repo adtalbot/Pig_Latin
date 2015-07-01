@@ -2,8 +2,10 @@ var pigLatin = function(englishWord) {
   var vowels = ['a', 'e', 'i', 'o', 'u'];
 
   for(var i = 0; i < vowels.length; i++) {                      /*Intializes index to 0, loops while i is less than 5, increments i by 1 after each loop*/
-    var startsWithVowel = (englishWord[0] === vowels[i]);       /*Evaluates if first letter of englishWord is equal to vowel array at position = i. startsWithVowel will be true or false*/
-    break;                                                      /*When startsWithVowel evaluates to true, will break for loop*/
+    if(englishWord[0] === vowels[i]) {                          /*Evaluates if first letter of englishWord is equal to vowel array at position = i*/
+      var startsWithVowel = true;                               /*startsWithVowel will be true or false*/
+      break;
+    }
   }
 
   if(startsWithVowel) {                                         /*If startsWithVowel evaluates to true*/
